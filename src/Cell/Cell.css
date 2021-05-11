@@ -1,0 +1,84 @@
+.Cell {
+    width: 180px;
+    height: 320px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+    color: #000000;
+    position: relative;
+    min-width: 180px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.date {
+    color: #E63946;
+    font-size: 20px;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+
+.dateWeekDay {
+    color: #E63946;
+    font-size: 18px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.temperature {
+    font-size: 32px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.icon {
+    margin-top: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon > img {
+    width: 140px;
+    height: 140px;
+}
+
+.description {
+    text-align: center;
+    font-weight: bold;
+    margin-top: -10px;
+    height: 35px;
+    color: #E63946;
+}
+
+.humidity, .rain, .wind, .cloudiness, .wind, .pressure, .uv, .feels_like {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day {
+    background-color: #FFE66D;
+    transition: background-color 0.5s;
+}
+
+.night {
+    background-color: #457B9D;
+    transition: background-color 0.5s;
+}
+
+.colorday {
+    color: #E63946;
+}
+
+.colornight {
+    color: #F1FAEE;
+}
+
+.moreData {
+    height: 410px;
+}

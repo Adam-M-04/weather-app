@@ -1,0 +1,54 @@
+.cells {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.cityName {
+    margin: 30px;
+    text-align: center;
+    
+}
+
+.timezone {
+    text-align: center;
+    
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.navButton {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+}
+
+.leftNavButton {
+    margin-right: -15px;
+}
+
+.rightNavButton {
+    margin-left: -15px;
+}
+
+.backButton {
+    background-color: transparent;
+    color: #E63946;
+    font-size: 25px;
+    border: 2px #E63946 solid;
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background-color: #E63946;
+    color: #F1FAEE;
+    transition: background-color 0.4s;
+    transition: color 0.4s;
+}
