@@ -49,7 +49,7 @@ const CellHours = ({HourData, timeZone, moreData}) => {
         let day_night = HourData.weather[0].icon.slice(2,3);
         switch ((HourData.weather[0].icon).slice(0,2)){
             case '01':
-                return (day_night === 'day') ? i01d : i01n;
+                return (day_night === 'd') ? i01d : i01n;
             case '02':
                 return (day_night === 'd') ? i02d : i02n;
             case '03':
