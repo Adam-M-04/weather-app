@@ -1,5 +1,5 @@
 import useFetch from "./useFetch";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
 
@@ -20,6 +20,20 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
         }
         return tmp;
     }
+
+    function handle(){
+        if(window.innerWidth > 1920){
+            document.body.style.marginLeft = (window.innerWidth - 1920) / 2 + 'px';
+        }else {
+            document.body.style.marginLeft = '0px';
+        }
+    }
+
+    useEffect(() => {
+        handle();
+        window.addEventListener('resize', handle);
+        return ()=>{window.removeEventListener('resize', handle);}
+    }, [])    
 
     const locationApiKey = "pk.c4cfc5e94bf8bebba4c2b68e4458a98f";
     const [placeURL, setplaceURL] = useState(null);

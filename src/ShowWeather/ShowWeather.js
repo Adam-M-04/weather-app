@@ -18,9 +18,15 @@ const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay}) => {
 
     function handle(){
         setwidth(document.body.clientWidth);
+        if(window.innerWidth > 1920){
+            document.body.style.marginLeft = (window.innerWidth - 1920) / 2 + 'px';
+        }else {
+            document.body.style.marginLeft = '0px';
+        }
     }
-
+    
     useEffect(() => {
+        handle();
         window.addEventListener('resize', handle);
         return ()=>{window.removeEventListener('resize', handle);}
     }, [])    

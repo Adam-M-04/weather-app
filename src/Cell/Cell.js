@@ -1,3 +1,22 @@
+import i01d from '../img/i01d.png';
+import i01n from '../img/i01n.png';
+import i02d from '../img/i02d.png';
+import i02n from '../img/i02n.png';
+import i03d from '../img/i03d.png';
+import i03n from '../img/i03n.png';
+import i04d from '../img/i04d.png';
+import i04n from '../img/i04n.png';
+import i09d from '../img/i09d.png';
+import i09n from '../img/i09n.png';
+import i10d from '../img/i10d.png';
+import i10n from '../img/i10n.png';
+import i11d from '../img/i11d.png';
+import i11n from '../img/i11n.png';
+import i13d from '../img/i13d.png';
+import i13n from '../img/i13n.png';
+import i50d from '../img/i50d.png';
+import i50n from '../img/i50n.png';
+
 const Cell = ({dayData, timeZone, day_night, moreData}) => {
 
     function format_time(s)
@@ -21,7 +40,28 @@ const Cell = ({dayData, timeZone, day_night, moreData}) => {
     }
 
     function getWeatherIconSrc(){
-        return `http://openweathermap.org/img/wn/${(dayData.weather[0].icon).slice(0,2) + day_night.slice(0,1)}@2x.png`;
+        switch ((dayData.weather[0].icon).slice(0,2)){
+            case '01':
+                return (day_night === 'day') ? i01d : i01n;
+            case '02':
+                return (day_night === 'day') ? i02d : i02n;
+            case '03':
+                return (day_night === 'day') ? i03d : i03n;
+            case '04':
+                return (day_night === 'day') ? i04d : i04n;
+            case '09':
+                return (day_night === 'day') ? i09d : i09n;
+            case '10':
+                return (day_night === 'day') ? i10d : i10n;
+            case '11':
+                return (day_night === 'day') ? i11d : i11n;
+            case '13':
+                return (day_night === 'day') ? i13d : i13n;
+            case '50':
+                return (day_night === 'day') ? i50d : i50n;
+            default:
+                return null;
+        }
     }
 
     function getUV(){
