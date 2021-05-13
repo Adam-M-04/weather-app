@@ -23,9 +23,9 @@ const MoreButton = ({moreData, setmoreData}) => {
     }
 
     return (
-        <div onClick={switchState} id='expandArrow'>
+        <div id='expandArrow'>
             <span id='more_less'>MORE</span> DATA<br/>
-            <img id='more_less_img' src={moreDataArrow} alt='expand icon'/>
+            <img onClick={switchState} id='more_less_img' src={moreDataArrow} alt='expand icon'/>
         </div>
     );
 }
