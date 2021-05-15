@@ -1,10 +1,10 @@
 import {useState} from 'react';
 import ChangeTheme from './buttons/ChangeTheme';
 import ShowWeather from './ShowWeather/ShowWeather';
-import Homepage from './Homepage';
+import Homepage from './Homepage/Homepage';
 
 const App = () => {
-    const [theme, setTheme] = useState('dark');
+    const [theme, setTheme] = useState((localStorage.getItem('theme') === 'light') ? 'light' : 'dark');
     document.querySelector('body').className = theme;
     const apiKey = "18d1046ea74a576c8a38770b105602e4";
     const [displayVar, setdisplayVar] = useState('homepage');

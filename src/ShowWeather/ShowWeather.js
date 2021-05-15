@@ -9,7 +9,7 @@ import CellHours from '../Cell/CellHours';
 
 const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay}) => {
     
-    const weatherData = useFetch(fetchURL);
+    const {DataToReturn: weatherData, loading, error} = useFetch(fetchURL);
     const [day_night, setday_night] = useState('day');
     const [days_hours, setdays_hours] = useState('days');
     const [moreData, setmoreData] = useState(false);
@@ -31,14 +31,14 @@ const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay}) => {
         return ()=>{window.removeEventListener('resize', handle);}
     }, [])    
 
-    if(weatherData === null) {
+    if(loading) {
         return (
             <h1 style={{textAlign : "center", marginTop : "100px"}}>Loading...</h1>
         )
     }
-    if(typeof(weatherData) === 'string') {
+    if(error) {
         return (
-            <h1 style={{textAlign : "center", marginTop : "100px"}}>{weatherData}</h1>
+            <h1 style={{textAlign : "center", marginTop : "100px"}}>{error}</h1>
         )
     }
 

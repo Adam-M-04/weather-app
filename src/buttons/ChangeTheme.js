@@ -2,7 +2,8 @@ const ChangeTheme = ({theme, setTheme}) => {
 
     function changeColor()
     {
-        setTheme(getOppositeColor());
+        localStorage.setItem('theme', getOppositeColor());
+        setTheme(getOppositeColor()); 
     }
 
     function getOppositeColor()
