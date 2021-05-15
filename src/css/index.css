@@ -2,6 +2,7 @@ body {
   max-width: 1920px;
   min-width: 300px;
   margin: 0px;
+  padding-bottom: 20px;
 }
 
 #App {
@@ -39,6 +40,7 @@ body {
   text-align: center;
   font-size: 50px;
   color: #E63946;
+  cursor: default;
 }
 
 
@@ -78,12 +80,19 @@ body {
 	text-align: center;
   box-shadow: 5px 5px 5px black;
   position: relative;
+  transition: 0.2s;
+}
+
+.locationResultBlock:hover {
+  box-shadow: 5px 5px 5px #E63946;
+  transition: 0.2s;
 }
 
 .Message {
   text-align: center;
   font-size: 30px;
   margin-top: 50px;
+  padding: 5px;
 }
 
 .display_name {
