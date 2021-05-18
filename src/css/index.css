@@ -49,6 +49,12 @@ body {
   text-align: center;
 }
 
+#more_less_img {
+  position: relative;
+  top: 0px;
+  transition: 0.2s;
+}
+
 #more_less_img:hover {
   cursor: pointer;
   position: relative;

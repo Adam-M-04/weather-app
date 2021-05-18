@@ -1,5 +1,6 @@
 import left_arrow from '../img/left_arrow.png';
 import right_arrow from '../img/right_arrow.png';
+import $ from 'jquery';
 
 const NavButton = ({currMinCell, setcurrMinCell, val}) => {
     let icon = null;
@@ -13,8 +14,17 @@ const NavButton = ({currMinCell, setcurrMinCell, val}) => {
         )
     }
 
+    function moveCells(){
+        let arrow = document.querySelector('.'+className);
+        arrow.style.left = (val * 10) + 'px';
+        setTimeout(() => {
+            arrow.style.left = '0px';
+        }, 80);
+        setcurrMinCell(currMinCell+val);
+    }
+
     return (
-        <div className={`navButton ${className}`} onClick={()=>{setcurrMinCell(currMinCell+val)}}> <img src={icon} alt='navigation arrow'/> </div>
+        <div className={`navButton ${className}`} onClick={moveCells}> <img src={icon} alt='navigation arrow'/> </div>
     );
 }
  

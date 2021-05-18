@@ -28,11 +28,18 @@
 
 .leftNavButton {
     margin-right: -15px;
+    position: relative;
+    left: 0px;
+    transition: 80ms;
 }
 
 .rightNavButton {
     margin-left: -15px;
+    position: relative;
+    left: 0px;
+    transition: 80ms;
 }
+
 
 .backButton {
     background-color: transparent;
