@@ -3,6 +3,7 @@ body {
   min-width: 300px;
   margin: 0px;
   padding-bottom: 20px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #App {
@@ -131,7 +132,6 @@ body {
   left: 0px;
   text-align: center;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .switchGraph {
