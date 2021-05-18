@@ -8,7 +8,7 @@ const ShowDataModeButton = ({showDataMode, setshowDataMode, theme}) => {
         <div style={{display: 'flex', justifyContent: 'center', margin: '10px'}}>
         <div className='switchMode'>
             <div className={'switchModeBackground side_' + showDataMode}></div>
-            <span className={'switchCells'} chosen={`${(showDataMode === 'cells')}`} onClick={()=>{changeMode('cells')}}>CELLS</span>
+            <span className='switchCells' chosen={`${(showDataMode === 'cells')}`} onClick={()=>{changeMode('cells')}}>CELLS</span>
             <span className='switchGraph' chosen={`${(showDataMode === 'diagram')}`} onClick={()=>{changeMode('diagram')}}>GRAPH</span>
         </div>
         </div>
