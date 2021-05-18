@@ -1,6 +1,5 @@
 import left_arrow from '../img/left_arrow.png';
 import right_arrow from '../img/right_arrow.png';
-import $ from 'jquery';
 
 const NavButton = ({currMinCell, setcurrMinCell, val}) => {
     let icon = null;
