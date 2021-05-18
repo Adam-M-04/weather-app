@@ -8,6 +8,11 @@
     position: relative;
     min-width: 180px;
     box-shadow: 5px 5px 5px black;
+    transition: 0.5s;
+}
+
+.moreData {
+    height: 410px;
 }
 
 .date {
@@ -77,8 +82,4 @@
 
 .colornight {
     color: #F1FAEE;
-}
-
-.moreData {
-    height: 410px;
 }

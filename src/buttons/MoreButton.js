@@ -1,26 +1,39 @@
 import $ from 'jquery';
 import moreDataArrow from '../img/moreDataArrow.png';
+import {useEffect} from 'react';
 
 const MoreButton = ({moreData, setmoreData}) => {
 
     function switchState(){
         if(!moreData){
+            setmoreData(!moreData);
             $('.Cell').animate({
                 height : "410px"
-            }, 500, ()=>{
-                $('#more_less').text('LESS')
-                $('#more_less_img').css({transform : 'rotate(180deg)'})
-            })
+            }, 450)
         }else {
             $('.Cell').animate({
                 height : "320px"
-            }, 500, ()=>{
-                $('#more_less').text('MORE')
-                $('#more_less_img').css({transform : 'rotate(0deg)'})
+            }, 450, ()=>{
+                setmoreData(!moreData);
             })
         }
-        setmoreData(!moreData);
     }
+
+    useEffect(() => {
+        if(moreData)
+        {
+            setTimeout(() => {
+                $('#more_less').text('LESS')
+                $('#more_less_img').css({transform : 'rotate(180deg)'})
+            }, 450);
+            
+        }
+        else
+        {
+            $('#more_less').text('MORE')
+            $('#more_less_img').css({transform : 'rotate(0deg)'})
+        }
+    }, [moreData])
 
     return (
         <div id='expandArrow'>

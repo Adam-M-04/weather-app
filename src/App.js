@@ -20,7 +20,7 @@ const App = () => {
             <h1 className='WebsiteTitle'>Weather <br/>Pro<ChangeTheme theme={theme} setTheme={setTheme}/></h1>
                 {
                     displayVar === 'weather' &&
-                    <ShowWeather fetchURL={fetchURL} setdisplayVar={setdisplayVar} nameToDisplay={nameToDisplay}/>
+                    <ShowWeather fetchURL={fetchURL} setdisplayVar={setdisplayVar} nameToDisplay={nameToDisplay} theme={theme}/>
                 }
                 {
                     displayVar === 'homepage' &&

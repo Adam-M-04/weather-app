@@ -116,3 +116,52 @@ body {
   height: 50px;
   right: 2.5px;
 }
+
+.switchMode {
+  width: 140px;
+  height: 30px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.switchCells {
+  width: 70px;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.switchGraph {
+  width: 70px;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  cursor: pointer;
+}
+
+[chosen=true] {
+  color: #F1FAEE;
+  transition: 0.5s;
+}
+
+.switchModeBackground {
+  width: 70px;
+  height: 30px;
+  background-color: #E63946;
+  border-radius: 10px;
+  position: absolute;
+  left: 0px;
+  transition: 0.5s;
+}
+
+.side_cells {
+  left: 0px;
+  right: 70px;
+}
+
+.side_diagram {
+  right: 0px;
+  left: 70px;
+}

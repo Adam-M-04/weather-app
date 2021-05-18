@@ -50,6 +50,5 @@
 .backButton:hover {
     background-color: #E63946;
     color: #F1FAEE;
-    transition: background-color 0.4s;
     transition: 0.3s;
 }
