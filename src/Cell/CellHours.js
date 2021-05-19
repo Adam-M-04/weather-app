@@ -3,19 +3,13 @@ import i01n from '../img/i01n.png';
 import i02d from '../img/i02d.png';
 import i02n from '../img/i02n.png';
 import i03d from '../img/i03d.png';
-import i03n from '../img/i03n.png';
 import i04d from '../img/i04d.png';
-import i04n from '../img/i04n.png';
 import i09d from '../img/i09d.png';
-import i09n from '../img/i09n.png';
 import i10d from '../img/i10d.png';
 import i10n from '../img/i10n.png';
 import i11d from '../img/i11d.png';
-import i11n from '../img/i11n.png';
 import i13d from '../img/i13d.png';
-import i13n from '../img/i13n.png';
 import i50d from '../img/i50d.png';
-import i50n from '../img/i50n.png';
 
 const CellHours = ({HourData, timeZone, moreData}) => {
     function format_time(s)
@@ -53,19 +47,19 @@ const CellHours = ({HourData, timeZone, moreData}) => {
             case '02':
                 return (day_night === 'd') ? i02d : i02n;
             case '03':
-                return (day_night === 'd') ? i03d : i03n;
+                return i03d;
             case '04':
-                return (day_night === 'd') ? i04d : i04n;
+                return i04d;
             case '09':
-                return (day_night === 'd') ? i09d : i09n;
+                return i09d;
             case '10':
                 return (day_night === 'd') ? i10d : i10n;
             case '11':
-                return (day_night === 'd') ? i11d : i11n;
+                return i11d;
             case '13':
-                return (day_night === 'd') ? i13d : i13n;
+                return i13d;
             case '50':
-                return (day_night === 'd') ? i50d : i50n;
+                return i50d;
             default:
                 return null;
         }

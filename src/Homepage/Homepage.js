@@ -1,6 +1,7 @@
 import useFetch from "../useFetch";
 import {useState, useEffect} from 'react';
 import HomepageResult from "./HomepageResult";
+import GetLocationButton from "../buttons/GetLocationButton";
 
 const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
 
@@ -67,13 +68,13 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
 
     return (
         <div id='Homepage'>
-            
-            <div style={{display : 'flex', justifyContent : 'space-around', marginTop : '50px'}}>
+            <div className='InputContainer' style={{display : 'flex', justifyContent : 'center', marginTop : '50px', position: 'relative'}}>
                 <div className="group">      
                     <input type="text" required id='placeQuery' maxLength='50' className={'input'+theme} autoComplete="off"/>
                     <span className="highlight"></span>
                     <span className="bar"></span>
                     <label className='inputLabel'>Location</label>
+                    <GetLocationButton selectPlace={selectPlace}/>
                 </div>
             </div>
             <div style={{display : 'flex', justifyContent : 'space-around', marginTop : '-20px'}}>

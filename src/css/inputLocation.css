@@ -1,13 +1,5 @@
 /* input */
 
-.container { 
-	font-family:'Roboto';
-	width:600px; 
-	margin:30px auto 0; 
-	display:block; 
-	background:transparent;
-	padding:10px 50px 50px;
-}
 h2 		 { 
 	text-align:center; 
 	margin-bottom:50px; 
