@@ -1,15 +1,4 @@
-import i01d from '../img/i01d.png';
-import i01n from '../img/i01n.png';
-import i02d from '../img/i02d.png';
-import i02n from '../img/i02n.png';
-import i03d from '../img/i03d.png';
-import i04d from '../img/i04d.png';
-import i09d from '../img/i09d.png';
-import i10d from '../img/i10d.png';
-import i10n from '../img/i10n.png';
-import i11d from '../img/i11d.png';
-import i13d from '../img/i13d.png';
-import i50d from '../img/i50d.png';
+import WeatherIcon from './WeatherIcon';
 
 const CellHours = ({HourData, timeZone, moreData}) => {
     function format_time(s)
@@ -39,31 +28,6 @@ const CellHours = ({HourData, timeZone, moreData}) => {
         return "Extremly High";
     }
 
-    function getWeatherIconSrc(){
-        let day_night = HourData.weather[0].icon.slice(2,3);
-        switch ((HourData.weather[0].icon).slice(0,2)){
-            case '01':
-                return (day_night === 'd') ? i01d : i01n;
-            case '02':
-                return (day_night === 'd') ? i02d : i02n;
-            case '03':
-                return i03d;
-            case '04':
-                return i04d;
-            case '09':
-                return i09d;
-            case '10':
-                return (day_night === 'd') ? i10d : i10n;
-            case '11':
-                return i11d;
-            case '13':
-                return i13d;
-            case '50':
-                return i50d;
-            default:
-                return null;
-        }
-    }
 
     const day_night = HourData.weather[0].icon[2] === 'd' ? 'day' : 'night';
     const time = (format_time(HourData.dt)).split(',');
@@ -73,7 +37,7 @@ const CellHours = ({HourData, timeZone, moreData}) => {
             <div className={`dateWeekDay color${day_night}`}>{time[0]}</div>
             <div className={`date color${day_night}`}>{time[1]}</div>
             <div className="temperature">{getTemperature()}<sup>&#8451;</sup></div>
-            <div className="icon"><img src={getWeatherIconSrc()} alt='icon'/></div>
+            <div className="icon"><WeatherIcon weatherID={HourData.weather[0].id} isNight={HourData.weather[0].icon[2] === 'n'}/></div>
             <div className={`description color${day_night}`}>{HourData.weather[0].description}</div>
             <div className="rain"><b>Rain:</b> {Math.round(HourData.pop*100)}%</div>
             <div className="humidity"><b>Humidity:</b> {Math.round(HourData.humidity)}%</div>
