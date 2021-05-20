@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './css/index.css';
 import './Cell/Cell.css';
 import './ShowWeather/ShowWeather.css';
@@ -15,3 +16,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+serviceWorkerRegistration.register();
