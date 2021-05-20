@@ -46,7 +46,7 @@
     color: #E63946;
     font-size: 25px;
     border: 2px #E63946 solid;
-    width: 70px;
+    width: 80px;
     text-align: center;
     border-radius: 10px;
     padding: 3px;
@@ -54,8 +54,9 @@
     transition: 0.3s;
 }
 
-.backButton:hover {
+.backButton:hover, .backButton:focus {
     background-color: #E63946;
     color: #F1FAEE;
     transition: 0.3s;
+    outline: none;
 }

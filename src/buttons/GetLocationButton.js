@@ -21,7 +21,7 @@ const GetLocationButton = ({selectPlace}) => {
     }
 
     return (
-        <img id='getLocation' onClick={getLocation} src={location} alt="device location"/>
+        <img id='getLocation' onClick={getLocation} src={location} alt="device location" tabIndex="0"/>
     );
 }
  

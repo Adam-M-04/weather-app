@@ -23,7 +23,7 @@ const NavButton = ({currMinCell, setcurrMinCell, val}) => {
     }
 
     return (
-        <div className={`navButton ${className}`} onClick={moveCells}> <img src={icon} alt='navigation arrow'/> </div>
+        <div className={`navButton ${className}`} onClick={moveCells} tabIndex="0"> <img src={icon} alt='navigation arrow'/> </div>
     );
 }
  

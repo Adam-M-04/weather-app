@@ -72,7 +72,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
                                     <div style={{display : 'flex', justifyContent : 'space-around'}}>
                                         <button className="btn SelectLocation" onClick={()=>{selectPlace(index)}}>Select</button>
                                     </div>
-                                    <img className='Star' src={getStarSrc(place.display_name)} alt='star' onClick={()=>{
+                                    <img className='Star' src={getStarSrc(place.display_name)} alt='star' tabIndex="0" onClick={()=>{
                                         handleFavourite(place);
                                     }}/>
                                 </div>
@@ -89,9 +89,9 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
                 <div className={'locationResultBlock'} style={{position : 'relative'}}>
                     <span className="display_name">{favouriteLocation.display_name}</span><br/>
                     <div style={{display : 'flex', justifyContent : 'space-around'}}>
-                        <button className="btn SelectLocation" onClick={()=>{selectPlace(favouriteLocation)}}>Select</button>
+                        <button className="btn SelectLocation" onClick={()=>{selectPlace(favouriteLocation)}} tabIndex="0">Select</button>
                     </div>
-                    <img className='Star' src={favStar} alt='star' onClick={
+                    <img className='Star' src={favStar} alt='star' tabIndex="0" onClick={
                         ()=>{handleFavourite(favouriteLocation);}
                     }/>
                 </div>

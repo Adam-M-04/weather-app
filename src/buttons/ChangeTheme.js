@@ -12,7 +12,7 @@ const ChangeTheme = ({theme, setTheme}) => {
     }
 
     return ( 
-        <button onClick={changeColor} className={'themeButton ' + getOppositeColor()}>{theme}</button>
+        <button onClick={changeColor} className={'themeButton ' + getOppositeColor()} tabIndex="0">{theme}</button>
     );
 }
  

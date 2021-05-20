@@ -73,12 +73,12 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
                     <input type="text" required id='placeQuery' maxLength='50' className={'input'+theme} autoComplete="off"/>
                     <span className="highlight"></span>
                     <span className="bar"></span>
-                    <label className='inputLabel'>Location</label>
+                    <label className='inputLabel' htmlFor="placeQuery">Location</label>
                     <GetLocationButton selectPlace={selectPlace}/>
                 </div>
             </div>
             <div style={{display : 'flex', justifyContent : 'space-around', marginTop : '-20px'}}>
-                <button className="btn ShowLocations" onClick={changeUrl}>Show locations</button>
+                <button className="btn ShowLocations" onClick={changeUrl} tabIndex="0">Show locations</button>
             </div>
             <br/>
             <HomepageResult places={places} loading={loading} error={error} selectPlace={selectPlace}/>
