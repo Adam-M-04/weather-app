@@ -42,6 +42,7 @@ body {
   font-size: 50px;
   color: #E63946;
   cursor: default;
+  text-shadow: -1px 0 #F1FAEE, 0 1px #F1FAEE, 1px 0 #F1FAEE, 0 -1px #F1FAEE;
 }
 
 
@@ -80,7 +81,7 @@ body {
 	width: 300px;
 	min-height: 60px;
 	background-color: #457B9D;
-	color: #F1FAEE;
+	color: #FFFFFF;
 	border: 4px #F1FAEE solid;
 	margin: 10px;
 	padding: 15px;

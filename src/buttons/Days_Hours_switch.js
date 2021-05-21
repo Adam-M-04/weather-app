@@ -9,7 +9,7 @@ const DaysHoursSwitch = ({setdays_hours, setcurrMinCell, setday_night}) => {
     return (
         <div className='switchButtonContainer'>
             <label className="switch">
-                <input className="switch-input" type="checkbox" id='Days_Hours_switch' tabIndex="0" onClick={handleSwitch} />
+                <input className="switch-input" type="checkbox" id='Days_Hours_switch' tabIndex="0" onChange={handleSwitch} />
                 <span className="switch-label" data-on="Hourly" data-off="Daily"></span> 
                 <span className="switch-handle"></span> 
             </label>

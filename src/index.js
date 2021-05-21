@@ -4,7 +4,7 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './css/index.css';
 import './Cell/Cell.css';
-import './ShowWeather/ShowWeather.css';
+import './css/ShowWeather.css';
 import './css/button.css';
 import './css/inputLocation.css';
 import './css/switch.css';

@@ -67,7 +67,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
                     places.map((place, index) => {
                         return (
                             <div className='locationResultFullWidth' key={index}>
-                                <div className={'locationResultBlock'} key={index} style={{position : 'relative'}}>
+                                <div className='locationResultBlock' key={index} style={{position : 'relative'}}>
                                     <span className="display_name">{place.display_name}</span><br/>
                                     <div style={{display : 'flex', justifyContent : 'space-around'}}>
                                         <button className="btn SelectLocation" onClick={()=>{selectPlace(index)}}>Select</button>
@@ -86,7 +86,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
     if(favouriteLocation){
         return(
             <div className='locationResultFullWidth'>
-                <div className={'locationResultBlock'} style={{position : 'relative'}}>
+                <div className='locationResultBlock' style={{position : 'relative'}}>
                     <span className="display_name">{favouriteLocation.display_name}</span><br/>
                     <div style={{display : 'flex', justifyContent : 'space-around'}}>
                         <button className="btn SelectLocation" onClick={()=>{selectPlace(favouriteLocation)}} tabIndex="0">Select</button>

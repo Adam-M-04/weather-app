@@ -77,9 +77,9 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
                     <GetLocationButton selectPlace={selectPlace}/>
                 </div>
             </div>
-            <div style={{display : 'flex', justifyContent : 'space-around', marginTop : '-20px'}}>
+            <nav style={{display : 'flex', justifyContent : 'space-around', marginTop : '-20px'}}>
                 <button className="btn ShowLocations" onClick={changeUrl} tabIndex="0">Show locations</button>
-            </div>
+            </nav>
             <br/>
             <HomepageResult places={places} loading={loading} error={error} selectPlace={selectPlace}/>
         </div>

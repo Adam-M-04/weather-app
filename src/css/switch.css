@@ -21,10 +21,6 @@
 	opacity: 0;
 	box-sizing:content-box;
 }
-.switch:focus-within{
-	outline: 1px dotted #212121;
-	outline: 5px auto -webkit-focus-ring-color;
-}
 .switch-label {
 	position: relative;
 	display: block;

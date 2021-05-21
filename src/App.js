@@ -17,7 +17,10 @@ const App = () => {
 
     return (
         <div id='App'>
-            <h1 className='WebsiteTitle'>Weather <br/>Pro<ChangeTheme theme={theme} setTheme={setTheme}/></h1>
+            <header>
+                <h1 className='WebsiteTitle'>Weather <br/>Pro<ChangeTheme theme={theme} setTheme={setTheme}/></h1>
+            </header>
+            <main>
                 {
                     displayVar === 'weather' &&
                     <ShowWeather fetchURL={fetchURL} setdisplayVar={setdisplayVar} nameToDisplay={nameToDisplay} theme={theme}/>
@@ -26,6 +29,7 @@ const App = () => {
                     displayVar === 'homepage' &&
                     <Homepage settingUrl={settingUrl} setdisplayVar={setdisplayVar} theme={theme} setnameToDisplay={setnameToDisplay}/>
                 }
+            </main>
         </div>
     );
 }

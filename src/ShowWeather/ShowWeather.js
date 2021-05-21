@@ -52,9 +52,9 @@ const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay, theme}) => {
 
     return (
         <div>
-            <div style={{display:'flex', justifyContent : 'space-around'}}>
+            <nav style={{display:'flex', justifyContent : 'space-around'}}>
                 <button className='backButton' onClick={()=>{setdisplayVar('homepage')}} tabIndex="0">Back</button>
-            </div>
+            </nav>
             <h2 className='cityName'>{nameToDisplay}<br/></h2>
             <h3 className='timezone'>Timezone: {weatherData.timezone.replace('_', ' ')}</h3>
 
