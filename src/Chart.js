@@ -56,7 +56,7 @@ const Chart = ({weatherData, timeZone, theme, day_night, days_hours}) => {
     }
 
     return (
-        <div style={{ width: "100%", height: '400px', position: 'relative'}}>
+        <div style={{ width: "100%", height: '400px', position: 'relative', color:'#1D3557'}}>
             <span style={{position: 'absolute', top: '-15px', left: '32px', cursor: 'default'}}>{'°C'}</span>
             <ResponsiveContainer>
                 <LineChart data={Data} margin={{top: 15,right: 50,left: 0,bottom: 40}}>
