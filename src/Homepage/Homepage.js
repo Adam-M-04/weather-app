@@ -33,8 +33,29 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
     useEffect(() => {
         handle();
         window.addEventListener('resize', handle);
-        return ()=>{window.removeEventListener('resize', handle);}
-    }, [])    
+
+        const input = document.getElementById('placeQuery');
+        input.addEventListener('keydown', event => {
+            if (event.key !== undefined) {
+                if(event.key === 'Enter' || event.key === 'NumpadEnter')
+                {
+                    changeUrl();
+                    return;
+                }
+            }
+            if (event.keyCode !== undefined) {
+                if(event.keyCode === 13) changeUrl()
+            }
+        });
+
+        return ()=>{
+            window.removeEventListener('resize', handle);
+            input.removeEventListener('keydown', event => {
+                if(event.key !== undefined) {if(event.key === 'Enter' || event.key === 'NumpadEnter'){changeUrl();return;}}
+                if(event.keyCode !== undefined) {if(event.keyCode === 13)changeUrl()}
+            });
+        }
+    }, [])
 
     const locationApiKey = "pk.c4cfc5e94bf8bebba4c2b68e4458a98f";
     const [placeURL, setplaceURL] = useState(null);
@@ -69,15 +90,14 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
             setnameToDisplay(index.display_name);
         }
         setdisplayVar('weather');
-        
     }
 
     return (
         <div id='Homepage'>
             <div className='InputContainer' style={{display : 'flex', justifyContent : 'center', marginTop : '50px', position: 'relative'}}>
                 <div className="group">      
-                    <input type="text" required id='placeQuery' maxLength='50' className={'input'+theme} 
-                        autoComplete="off" title="Sample location: Los Angeles, California"/>
+                    <input type="text" id='placeQuery' maxLength='50' className={'input'+theme} 
+                        autoComplete="off" title="Sample location: Los Angeles, California" required/>
                     <span className="highlight"></span>
                     <span className="bar"></span>
                     <label className='inputLabel' htmlFor="placeQuery">Location</label>
