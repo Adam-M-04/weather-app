@@ -68,10 +68,10 @@ const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay, theme}) => {
                 showDataMode === 'cells' && <MoreButton moreData={moreData} setmoreData={setmoreData}/>
             }
 
-            <DaysHoursSwitch setdays_hours={setdays_hours} setcurrMinCell={setcurrMinCell} setday_night={setday_night}/>
+            <DaysHoursSwitch setdays_hours={setdays_hours} setcurrMinCell={setcurrMinCell} setday_night={setday_night} days_hours={days_hours}/>
             
             {
-                days_hours === 'days' && <DayNightSwitch setday_night={setday_night}/>
+                days_hours === 'days' && <DayNightSwitch setday_night={setday_night} day_night={day_night}/>
             }   
 
         </div>

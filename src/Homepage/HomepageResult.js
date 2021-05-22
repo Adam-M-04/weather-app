@@ -40,9 +40,14 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
         setfavouriteLocation(checkObject(localStorage.getItem('favouriteLocation')));
     }
 
+    function checkFavourite(name){
+        if(favouriteLocation === null) return false;
+        if(name === favouriteLocation.display_name) return true;
+        return false;
+    }
+
     function getStarSrc(name){
-        if(favouriteLocation === null) return Star;
-        if(name === favouriteLocation.display_name) return favStar;
+        if(checkFavourite(name)) return favStar;
         return Star;
     }
 
@@ -74,7 +79,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
                                     </div>
                                     <img className='Star' src={getStarSrc(place.display_name)} alt='star' tabIndex="0" onClick={()=>{
                                         handleFavourite(place);
-                                    }}/>
+                                    }} title={checkFavourite(place.display_name) ? "Uncheck this location as a favourite" : "Set this location as a favourite"}/>
                                 </div>
                             </div>
                         )
@@ -93,7 +98,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
                     </div>
                     <img className='Star' src={favStar} alt='star' tabIndex="0" onClick={
                         ()=>{handleFavourite(favouriteLocation);}
-                    }/>
+                    } title="Uncheck this location as a favourite" />
                 </div>
             </div>
         )

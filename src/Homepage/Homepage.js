@@ -42,13 +42,19 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
     places = filtrPlaces(places);
     
     function changeUrl(){
+        const ptrn = new RegExp("^[^&$?*!@#%:;<>+]+$", "g");
         const query = document.getElementById('placeQuery').value;
-        if(query.length > 0){
+        if(query.length === 0)
+        {
+            setplaceURL('VoidInput');
+            return;
+        }
+        if(ptrn.test(query)){
             setplaceURL(`https://eu1.locationiq.com/v1/search.php?key=${locationApiKey}&q=${query}&limit=8&format=json`);
         }
         else
         {
-            setplaceURL('VoidInput');
+            setplaceURL('IncorrectInput');
         }
     }
 
@@ -70,7 +76,8 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
         <div id='Homepage'>
             <div className='InputContainer' style={{display : 'flex', justifyContent : 'center', marginTop : '50px', position: 'relative'}}>
                 <div className="group">      
-                    <input type="text" required id='placeQuery' maxLength='50' className={'input'+theme} autoComplete="off"/>
+                    <input type="text" required id='placeQuery' maxLength='50' className={'input'+theme} 
+                        autoComplete="off" title="Sample location: Los Angeles, California"/>
                     <span className="highlight"></span>
                     <span className="bar"></span>
                     <label className='inputLabel' htmlFor="placeQuery">Location</label>

@@ -15,7 +15,13 @@ const useFetch = (fetchURL) => {
         if(fetchURL==='VoidInput')
         {
             setloading(false);
-            seterror('Type any character to get result');
+            seterror('You did not type anything');
+            return;
+        }
+        if(fetchURL==='IncorrectInput')
+        {
+            setloading(false);
+            seterror('Do not enter any of the following characters: !@#$%&?:;<>+*');
             return;
         }
         const abortFetch = new AbortController();
