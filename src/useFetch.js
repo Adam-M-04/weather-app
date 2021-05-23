@@ -7,6 +7,7 @@ const useFetch = (fetchURL) => {
     const [loading, setloading] = useState(true);
     
     useEffect(()=>{
+        setloading(true);
         if(fetchURL===null)
         {
             setloading(false);

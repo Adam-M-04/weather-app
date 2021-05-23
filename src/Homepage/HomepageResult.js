@@ -53,7 +53,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
 
     if(loading){
         return(
-            <div id='Message'>
+            <div className='Message'>
                 Loading...
             </div>
         )

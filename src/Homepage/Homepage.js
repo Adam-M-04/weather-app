@@ -1,5 +1,5 @@
 import useFetch from "../useFetch";
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import HomepageResult from "./HomepageResult";
 import GetLocationButton from "../buttons/GetLocationButton";
 
@@ -52,7 +52,7 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
             window.removeEventListener('resize', handle);
             input.removeEventListener('keydown', event => {
                 if(event.key !== undefined) {if(event.key === 'Enter' || event.key === 'NumpadEnter'){changeUrl();return;}}
-                if(event.keyCode !== undefined) {if(event.keyCode === 13)changeUrl()}
+                if(event.keyCode !== undefined) {if(event.keyCode === 13) changeUrl()}
             });
         }
     }, [])
