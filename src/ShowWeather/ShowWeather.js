@@ -5,6 +5,8 @@ import MoreButton from '../buttons/MoreButton';
 import DaysHoursSwitch from '../buttons/Days_Hours_switch';
 import Content from './Content';
 import ShowDataModeButton from '../buttons/ShowDataModeButton';
+import loadingdark from '../img/loadingdark.gif';
+import loadinglight from '../img/loadinglight.gif';
 
 const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay, theme}) => {
     
@@ -33,7 +35,7 @@ const ShowWeather = ({fetchURL, setdisplayVar, nameToDisplay, theme}) => {
 
     if(loading) {
         return (
-            <h1 style={{textAlign : "center", marginTop : "100px"}}>Loading...</h1>
+            <div style={{textAlign : "center", marginTop : "100px"}}><img src={theme === 'dark' ? loadingdark : loadinglight} alt="loading..."/></div>
         )
     }
     if(error) {

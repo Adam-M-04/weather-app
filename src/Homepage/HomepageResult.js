@@ -1,8 +1,10 @@
 import {useState} from 'react';
 import Star from '../img/Star.png';
 import favStar from '../img/favStar.png';
+import loadingdark from '../img/loadingdark.gif';
+import loadinglight from '../img/loadinglight.gif';
 
-const HomepageResult = ({places, loading, error, selectPlace}) => {
+const HomepageResult = ({places, loading, error, selectPlace, theme}) => {
 
     function checkObject(obj){
         try
@@ -54,7 +56,7 @@ const HomepageResult = ({places, loading, error, selectPlace}) => {
     if(loading){
         return(
             <div className='Message'>
-                Loading...
+                <img src={theme === 'dark' ? loadingdark : loadinglight} alt="loading..."/>
             </div>
         )
     }

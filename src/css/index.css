@@ -184,10 +184,5 @@ body {
   position: absolute;
   right: -20px;
   top: -5px;
-}
-
-#getLocation:hover, #getLocation:focus {
-  top: -10px;
-  transition: 0.2s;
   outline: none;
 }

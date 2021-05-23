@@ -108,7 +108,7 @@ const Homepage = ({settingUrl, setdisplayVar, theme, setnameToDisplay}) => {
                 <button className="btn ShowLocations" onClick={changeUrl} tabIndex="0">Show locations</button>
             </nav>
             <br/>
-            <HomepageResult places={places} loading={loading} error={error} selectPlace={selectPlace}/>
+            <HomepageResult places={places} loading={loading} error={error} selectPlace={selectPlace} theme={theme}/>
         </div>
     );
 }
