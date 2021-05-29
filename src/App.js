@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import ChangeTheme from './buttons/ChangeTheme';
 import ShowWeather from './ShowWeather/ShowWeather';
 import Homepage from './Homepage/Homepage';
@@ -18,7 +18,9 @@ const App = () => {
     return (
         <div id='App'>
             <header>
-                <h1 className='WebsiteTitle'>Weather <br/>Pro<ChangeTheme theme={theme} setTheme={setTheme}/></h1>
+                <h1 className='WebsiteTitle'>
+                    <span style={{cursor: 'pointer'}} onClick={()=>{setdisplayVar('homepage')}}>Weather <br/>Pro</span>
+                    <ChangeTheme theme={theme} setTheme={setTheme}/></h1>
             </header>
             <main>
                 {
